@@ -1,55 +1,141 @@
-@import 
-url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap&#39');
 
-*{  
-margin: 0px;
-padding: 0px;
-list-style: none;
-text-decoration: none;
-font-family: Montserrat;
-box-sizing: border-box;
+
+/* Variaveis das Cores */
+
+/* TEMA DARK */
+:root, :root[data-theme='dark'] {
+    --primary-color: #f0f0f0;  /*cor principal Textos*/
+    --primary-bg-color: #171511;  /*cor principal Fundo*/
+    /* bg = background == cor do Fundo */
+    --secondary-bg-color: #28292E; /*cor secundária do fundo*/
+    --primary-border-color: #28292E;
+    --secondary-border-color: #56575A;
+    --title-color: #F0F0F0;
+    --link-color: #8f8f8f;
+    --link-hover: #f0f0f0;
+    --icon-color: #c7c8c9;
 
 }
-     
-    body {
-    color: #eb99cf;
+/* TEMA LIGHT */
+:root[data-theme='light'] {
+    --primary-color: #0d0c09; /* cor principal textos */
+    --primary-bg-color: #f0f2f5;
+    --secondary-bg-color: #c7c8c9;
+    --primary-border-color: #c7c8c9;
+    --secondary-border-color:#9a9a9c;
+    --title-color: #0b0b0f;
+    --link-hover: #a3a2a2;
+    --link-color: #0b0b0f;
+    --icon-color: #56575a;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+    list-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-bg-color) transparent;
+}
+a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+a:hover{
+    color: var(--link-hover);
 }
 
-header {
-    width: 100%;
-    height: 80px;
-    background: #e286eb;
+i {
+    color:var(--icon-color);
+}
+
+.header{
     display: flex;
-    align-items: center;
+    flex-flow: row wrap;
+    /* Coloca o conteùdo em linha e permite a quebra de linha */
+
     justify-content: space-between;
-    padding: 0 100px;
+    /*os itens dentro do container flexivel serão distribuidos de forma uniforme ao longo do eixo principal com espaços iguais entre eles */
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    z-index: 2;
 }
 
-.logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: #f8f5f8;
+body {
+    background: var(--primary-bg-color); /*cor fundo*/
+    color: var(--primary-color);  /*cor geral dos textos*/
+    font-family: 'Playwrite', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header-logo .logo{
+    width: 3.25rem;
+    height: 3.25rem;}
+
+#toggleTheme{
+    font-size:1.5rem ; /*tamanho da fonte */
+    color: var(--icon-color);
+    cursor:pointer;
+    transition: ease-in-out .4s;
+}
+.menu {
+    display: flex;
+    align-items: center ;
+    background: var(--primary-bg-color);
+    gap: 1rem;
+}
+.menu-mobile {
+    width: 100%;
+    position: fixed;
+    bottom:0 ;
+    justify-content: space-between;
+    border-top: 1px solid var(--primary-border-color);
+}
+.menu-mobile .menu-link {
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 1rem;
+}
+.menu-link.active .menu-icon,
+.menu-link.active .menu-text,
+.menu-link:hover .menu-icon,
+.menu-link:hover .menu-text {
+    color: var(--link-hover);
 }
 
-.hamburguer {
+.menu-icon, .menu-text {
+    color: var(--link-color);
+    font-weight: 600;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+}
+.menu-text{
+  font-size:.75rem ;
+    text-transform: uppercase;
+}
+.header-nav {
     display: none;
 }
-
-.nav-bar ul {
-    display: flex;
+.menu-principal {
+    gap: 1rem;
 }
 
-.nav-bar ul li a {
-    display: block;
-    color: #dd9bd8;
-    font-size: 20px;
-    padding: 10px 25px;
-    border-radius: 50px;
-    transition: 0.2s;
-    margin: 0 5px;
-}
-
-.nav-bar ul li a:hover {
-    color: #11101B;
-    background: #e073db;
+/*---------------------------------------------*/
+/*CSS RESPONSIVO */
+@media (min-width: 768px)
+{
+    .header{
+        position: fixed;
+        border-bottom: 2px solid var(--primary-border-color);
+        padding: 1rem 6rem;
+    }
+     .nav-mobile{
+     display: none;
+     }
+     .header-nav{
+        display: flex;
+     }
+    
 }
