@@ -69,17 +69,12 @@ body {
     font-family: 'Playwrite', Tahoma, Geneva, Verdana, sans-serif;
 }
 .header-logo .logo{
-    width: 3.25rem;
-    height: 3.25rem;}
-     .header-logo .logo2{
-        width: 6.25rem;
-        height: 1.25;
-        margin-left: 20px;
-        position: relative;
-        bottom: 10px;
-     }
+    width: 18rem;
+    height: 3.25rem;
+    position: relative;}
 
-    html[data-theme='light'] .logo {
+
+    html[data-theme='dark'] .logo {
         filter: invert(1)
     }
 
