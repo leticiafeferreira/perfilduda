@@ -218,6 +218,54 @@ html[data-theme='light'] .logo2 {
     padding: 3.5rem 5rem;
 }
 
+.card-cover{
+    width: 100%;
+    border-radius: 2rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.card-title{
+    font-size: 2rem;
+    color: var(--title-color);
+    font-weight: 400;
+    font-family: 'Poppins';
+}
+
+.card-descripition{
+    color: var(--primary-color);
+    text-align: justify;
+}
+
+.card-lista{
+    margin-left: 2rem;
+}
+.card-item {
+    list-style: circle;
+    margin: 0.25rem;
+}
+
+.card-button, .card-descripition {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.card-button .btn {
+    padding: .65rem 1.25rem;
+}
+
+.card-button span {
+    font-size: 1rem;
+}
 
 
 
