@@ -78,7 +78,7 @@ i {
 }
    
 .header-logo .logo{
-    width: 3.25rem;
+    width: 16rem;
     height: 3.25rem;
 }
 
@@ -90,7 +90,7 @@ i {
     bottom: 5px;
 }
 
-html[data-theme='light'] .logo {
+html[data-theme='dark'] .logo {
     filter: invert(1);
 } 
 
@@ -219,7 +219,7 @@ html[data-theme='light'] .logo2 {
 }
 
 .card-cover{
-    width: 100%;
+    width: 20%;
     border-radius: 2rem;
     object-fit: cover;
     object-position: center;
