@@ -274,7 +274,23 @@ html[data-theme='light'] .logo2 {
     font-size: 1rem;
 }
 
+.sobre{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 
+.sobre-content1, .sobre-content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sobre-perfil {
+    width: 100%;
+    border-radius: 50rem;
+    border: 8px solid var (--link-color); /* cor da borda*/
+}
 
 
 /* =====  --------------------- ======= */
@@ -330,5 +346,43 @@ html[data-theme='light'] .logo2 {
     }
     .card-cover{
         width: 55%;
+    }
+    .sobre{
+        gap: 5rem;
+    }
+    .sobre-content1, .sobre-content2 {
+        display: grid;
+        grid-template-columns: 34% 60%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 4rem;
+    }
+}
+@media (min-width: 1200px) {
+    h2{
+        font-size: 4rem;
+    }
+    h3{
+        font-size: 2.5rem;
+    }
+    #home{
+        padding: 10rem 6rem 2rem;
+    }
+    p, span, li {
+        font-size: 1.15;
+    }
+    .card-button .btn, ,descricao-button .btn{
+        width: auto;
+    }
+}
+@media (min-width: 1400px) {
+    h1{
+        font-size: 6.25rem;
+    }
+    h2{
+        font-size: 4.5rem;
+    }
+    h3{
+        font-size: 3.35rem;
     }
 }
