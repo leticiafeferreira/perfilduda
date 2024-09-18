@@ -346,7 +346,18 @@ html[data-theme='light'] .logo2 {
 .accordion-header.start{
     border-radius: 0.25rem 0.25rem 0rem 0rem;
 }
+
+.accordion-header.end,
+.accordion-item.active .accordion-body.end {
+    border-radius: 0rem 0rem 1rem 1rem;
+}
+
+.accordion-item.active .accordion-item.end{
+    border-radius: 0;
+}
+
 .accordion-body {
+    /* display: none ; */
     padding: 1.25rem;
     flex-direction: column;
     text-align: justify;
@@ -354,6 +365,15 @@ html[data-theme='light'] .logo2 {
     gap: 1rem;
     border: 1px solid var(--primary-border-color);
 }
+ .accordion-item.active .accordion-header {
+    background: var(--primary-bg-color);
+ }
+
+ .accordion-item.active .accordion-body {
+    display: flex;
+ }
+
+ /*Rotacionar Icone*/
 /* =====  --------------------- ======= */
 
 /* CSS Responsivo */
