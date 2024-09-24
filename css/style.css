@@ -76,6 +76,7 @@ i {
     width: 100%;
     padding: 0.5rem 1rem;
     z-index: 2;/*sobreposição*/
+    background: var(--primary-bg-color);
 }
    
 .header-logo .logo{
@@ -357,7 +358,7 @@ html[data-theme='light'] .logo2 {
 }
 
 .accordion-body {
-    /* display: none ; */
+    display: none;
     padding: 1.25rem;
     flex-direction: column;
     text-align: justify;
@@ -374,6 +375,39 @@ html[data-theme='light'] .logo2 {
  }
 
  /*Rotacionar Icone*/
+
+ .accordion-item.active .bi-caret-down-fill{
+    transform: rotate(180deg);
+ }
+
+ /*Contato*/
+
+ .contato{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-top: 1px solid var(--primary-border-color);
+    border-bottom: 3px solid var(--secondary-border-color);
+ }
+
+ .contato p {
+    text-align: center;
+ }
+ .contato .btn {
+    text-transform: uppercase;
+ }
+
+ /*roda pé = Footer*/
+ footer{
+    margin-bottom: 5rem;
+ }
+ footer p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+ }
 /* =====  --------------------- ======= */
 
 /* CSS Responsivo */
