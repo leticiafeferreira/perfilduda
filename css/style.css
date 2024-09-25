@@ -222,6 +222,18 @@ html[data-theme='light'] .logo2 {
     padding: 5rem 5rem;
 }
 
+.projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.projetos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 .projeto-card{
     display: flex;
     flex-direction: column;
@@ -230,6 +242,7 @@ html[data-theme='light'] .logo2 {
 
 .card-cover{
     width: 20%;
+    height: 10%;
     border-radius: 2rem;
     object-fit: cover;
     object-position: center;
@@ -250,9 +263,10 @@ html[data-theme='light'] .logo2 {
     font-family: 'Poppins';
 }
 
-.card-descripition{
+.card-description{
     color: var(--primary-color);
     text-align: justify;
+    font-size: 1.5rem;
 }
 
 .card-lista{
@@ -460,8 +474,9 @@ html[data-theme='light'] .logo2 {
         justify-content: space-between;
     }
     .card-cover{
-        width: 55%;
+        width: 35%;
     }
+    
     .sobre{
         gap: 5rem;
     }
@@ -471,6 +486,13 @@ html[data-theme='light'] .logo2 {
         justify-content: flex-start;
         align-items: flex-start;
         gap: 4rem;
+    }
+
+    .sobre-descricao h2 {
+        text-align: left;
+    }
+    .descricao-button{
+        justify-content: flex-start;
     }
 }
 @media (min-width: 1200px) {
@@ -482,6 +504,9 @@ html[data-theme='light'] .logo2 {
     }
     #home{
         padding: 10rem 6rem 2rem;
+    }
+    .main-content .btn {
+        width: auto;
     }
     p, span, li {
         font-size: 1.15;
@@ -500,5 +525,8 @@ html[data-theme='light'] .logo2 {
     }
     h3{
         font-size: 3.35rem;
+    }
+    .header{
+        padding: 1rem 6rem 1rem;
     }
 }
