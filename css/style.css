@@ -260,7 +260,7 @@ html[data-theme='light'] .logo2 {
     font-size: 2rem;
     color: var(--title-color);
     font-weight: 400;
-    font-family: 'Poppins';
+    font-family: 'League+Spartan';
 }
 
 .card-description{
@@ -274,7 +274,7 @@ html[data-theme='light'] .logo2 {
 }
 .card-item {
     list-style: circle;
-    margin: 0.25rem;
+    margin: 1.5rem;
 }
 
 .card-button, .card-descripition {
